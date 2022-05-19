@@ -1,0 +1,21 @@
+.reviewarea{
+    padding: 20px;
+    height: auto;
+    width: 100%;
+
+    .reviews{
+        background-color: rgba(233, 233, 233, 0.671);
+        img{
+            width: 100%;
+        }
+       
+    }
+    .otherreview{
+        // background-color: rgba(233, 233, 233, 0.671);
+      
+           .card{
+               margin: 10px;
+           }
+       
+    }
+}
