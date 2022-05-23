@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Row, Container, Col, Form, Button } from 'react-bootstrap';
-import { Carousel } from 'react-bootstrap';
+
+import { Row, Container, Col, Form } from 'react-bootstrap';
+
 import Promos from './Promos';
 import Reviews from './Reviews';
 import Pricing from './Pricing';
@@ -9,96 +9,81 @@ import '../styles/FrontPage.scss'
 
 const FrontPage = () => {
 
-    const [index, setIndex] = useState(0);
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    }
-
     return (
         <div className='section'>
-            <Carousel  activeIndex={index} onSelect={handleSelect} controls={false} interval={null}>
-                <Carousel.Item className='intro'>
-                    <Container fluid className='introbg'>
-                        <Row className='row'>
-                            <Col sm={6} className='title'>
-                                <div className='description'>
-                                    <div className='text'>
-                                        <h1 className='display-3'>Lucky G <br />transport</h1>
-                                        <p>description goes here</p>
-                                    </div>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </Carousel.Item>
+            <div className='banner'>
 
-                <Carousel.Item className='formbg'>
-                    <Container fluid='sm' className='form1'>
-                        <Row className='row'>
-                           
-                            <Col sm>
-                            <h1>Pick up Details</h1>
-                                <Form>
-
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label>Pick-up Date and Time</Form.Label>
+                <div className='bannerbg'>
+                    <Container fluid='sm'>
+                        <Form>
+                            <Row className='m-3'>
+                                <Col>
+                                    <h1>RENT A CAR</h1>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Form.Group className='mb-3'>
+                                        <Form.Label>Pick-up Date/ Time</Form.Label>
                                         <Form.Control type='datetime-local' />
                                     </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group className='mb-3'>
+                                        <Form.Label>Return Date/ Time</Form.Label>
+                                        <Form.Control type='datetime-local' />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
 
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Row>
+                                <Col>
+                                    <Form.Group className='mb-3'>
                                         <Form.Label>Pick-up Location</Form.Label>
-                                        <Form.Select>
-                                            <option>Select</option>
-                                            <option value='QC'>Quezon City Branch</option>
-                                            <option value='Manila'>Manila Branch</option>
-                                            <option value='Makati'>Makati Branch</option>
-                                        </Form.Select>
+                                        <Form.Control type='text' />
                                     </Form.Group>
-                                    <Form.Group >
-                                        <Form.Select>
-                                            <option>Car Type:</option>
-                                            <option value='standard'>Standard Car</option>
-                                            <option value='convertible'>Convertible</option>
-                                            <option value='luxury'>Luxury Car</option>
-                                            <option value='van'>Van</option>
-                                            <option value='suv'>SUVs</option>
-                                        </Form.Select>
+                                </Col>
+                                <Col>
+                                    <Form.Group className='mb-3'>
+                                        <Form.Label>Return Location</Form.Label>
+                                        <Form.Control type='text' />
                                     </Form.Group>
-                                </Form>
+                                </Col>
+                            </Row>
 
-                            </Col>
-
-                            <Col sm>
-                            <h1>Return Details</h1>
-                                <Form>
-
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label>Return Date and Time</Form.Label>
-                                        <Form.Control type='datetime-local' />
+                            <Row>
+                                <Col sm>
+                                    <Form.Group className='mb-3'>
+                                        <Form.Label>Name*</Form.Label>
+                                        <Form.Control type='text' />
                                     </Form.Group>
+                                </Col>
 
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label>Drop-off Location</Form.Label>
-                                        <Form.Select>
-                                            <option>Select</option>
-                                            <option value='QC'>Quezon City Branch</option>
-                                            <option value='Manila'>Manila Branch</option>
-                                            <option value='Makati'>Makati Branch</option>
-                                        </Form.Select>
+                                <Col sm>
+                                    <Form.Group className='mb-3'>
+                                        <Form.Label>E-Mail*</Form.Label>
+                                        <Form.Control type='text' />
                                     </Form.Group>
-                                    <Form.Group >
-                                        <Form.Control type='button' value='Check Price and Availability' className='button'/>
+                                </Col>
+
+                                <Col sm>
+                                    <Form.Group className='mb-3'>
+                                        <Form.Label>Phone Number</Form.Label>
+                                        <Form.Control type='text' />
                                     </Form.Group>
+                                </Col>
+                            </Row>
 
-                                </Form>
-
-                            </Col>
-                        </Row>
-
+                            <Row>
+                                <Col className='button'>
+                                    <input type='button' value='GET A QUOTE NOW' className='btn' />
+                                </Col>
+                            </Row>
+                        </Form>
                     </Container>
-                </Carousel.Item>
+                </div>
 
-            </Carousel>
+            </div>
 
             <Container fluid='sm'>
                 <Row className='brands'>
@@ -112,8 +97,8 @@ const FrontPage = () => {
             </Container>
 
             <Promos />
-            <Reviews/>
-            <Pricing/>
+            <Reviews />
+            <Pricing />
         </div>
 
     )

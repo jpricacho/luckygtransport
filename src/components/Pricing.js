@@ -7,7 +7,7 @@ import { Carousel } from 'react-bootstrap';
 const Pricing = () => {
   return (
     <div className='pricing'>
-      <Carousel variant="dark">
+      <Carousel variant="dark" className='p-5'>
         <Carousel.Item>
           <Container fluid='sm' >
             <Row>

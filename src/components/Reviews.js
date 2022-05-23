@@ -9,7 +9,7 @@ const Reviews = () => {
 
     return (
         <div className='reviewarea'>
-            <Container fluid='sm' >
+            <Container fluid='sm' className='m-5 pt-5 pb-5'>
                 <Row className='reviews'>
                     <Col sm={6}>
                         <div className='img'>

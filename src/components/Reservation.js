@@ -37,13 +37,13 @@ const Reservation = () => {
                             <Col>
                                 <Form.Group className='mb-3'>
                                     <Form.Label>Pick-up Location</Form.Label>
-                                    <Form.Control type='datetime-local' />
+                                    <Form.Control type='text' />
                                 </Form.Group>
                             </Col>
                             <Col>
                                 <Form.Group className='mb-3'>
                                     <Form.Label>Return Location</Form.Label>
-                                    <Form.Control type='datetime-local' />
+                                    <Form.Control type='text' />
                                 </Form.Group>
                             </Col>
                         </Row>
