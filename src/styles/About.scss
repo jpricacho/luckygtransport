@@ -1,0 +1,28 @@
+.about{
+    .aboutbanner{
+        background-image: url(../media/aboutbanner.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 40vh;
+        .bannerbg{
+            background-color: rgba(0, 0, 0, 0.39);
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1{
+                color: white;
+                font-family: 'Krona One', sans-serif;
+            }
+        }
+    }
+
+    .text{
+        
+    }
+
+    .aboutpic{
+        width: 100%;
+    }
+}

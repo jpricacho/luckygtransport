@@ -1,4 +1,3 @@
-import './styles/App.scss';
 import FrontPage from './components/FrontPage';
 import Header from './components/Header';
 

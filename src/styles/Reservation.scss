@@ -1,0 +1,44 @@
+.reservation{
+    .resbanner{
+        background-image: url(../media/reservationbanner.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 40vh;
+        .bannerbg{
+            background-color: rgba(0, 0, 0, 0.39);
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1{
+                color: white;
+                font-family: 'Krona One', sans-serif;
+            }
+        }
+    }
+
+    .form{
+        padding: 20px;
+        form{
+            background-color: rgba(175, 175, 175, 0.24);
+            padding: 20px;
+            label{
+                font-weight: 600;
+            }
+            
+            input{
+                padding: 10px;
+            }
+            .button{
+                text-align: center;
+                margin-top: 10px;
+                .btn{
+                    background-color: rgb(111, 111, 175);
+                    width: 30%;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
