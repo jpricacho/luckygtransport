@@ -2,7 +2,7 @@ import { Row, Col, Form, } from 'react-bootstrap';
 import React from 'react';
 import axios from 'axios';
 
-const API_PATH = 'https://cwd-kalinga.lineagevaluation.com/exercise/web/booking.php'
+const API_PATH = 'http://localhost/Capstone/public/booking.php'
 
 
 class Booking extends React.Component {
