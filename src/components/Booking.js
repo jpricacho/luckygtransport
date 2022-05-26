@@ -2,7 +2,7 @@ import { Row, Col, Form, } from 'react-bootstrap';
 import React from 'react';
 import axios from 'axios';
 
-const API_PATH = 'http://localhost/Capstone/public/booking.php'
+const API_PATH = 'https://luckyg.netlify.app/booking.php'
 
 
 class Booking extends React.Component {
