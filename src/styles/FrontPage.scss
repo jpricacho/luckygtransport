@@ -4,68 +4,83 @@
 .section{
    background-color: white;
     
-    .row{
-        padding: 30px;
-        width: 100%;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .title{
-            text-align: center;
-        }
-    }
-    .intro{
+    .banner{
         background-image: url(../media/carbg1.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 1;
-        .introbg{
-            background-color: rgba(0, 0, 0, 0.507);
-            h1{
-                color: rgb(201, 66, 25);
-                padding: 20px;
-                font-family: 'Krona One', sans-serif;
-            }
-        }
-    }
-
-
-    .formbg{
-        background-image: url(../media/carbg.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: 1;
-        
-        .form1{
-            background-color: rgba(0, 0, 0, 0.507);
+        height: 90vh;
+        .bannerbg{
+            background-color: rgba(0, 0, 0, 0.582);
+            height: 90vh;
             display: flex;
             justify-content: center;
+            align-items: center;
+
             h1{
                 color: white;
-                padding: 20px;
+                text-align: center;
                 font-family: 'Krona One', sans-serif;
+            }
 
+            form {
+                padding: 20px;
+    
+                label {
+                    font-weight: 600;
+                    color: white;
+                }
+    
+                input {
+                    padding: 10px;
+                }
+    
+                .button {
+                    text-align: center;
+                    margin-top: 10px;
+    
+                    .btn {
+                        background-color: rgb(255, 102, 0);
+                        border: 2px solid rgb(255, 102, 0);
+                        color: black;
+                        font: inherit;
+                        line-height: 1;
+                        margin: 0.5em;
+                        padding: 1em 2em;
+                        
+                        &:hover,
+                        :focus {
+                            transform: translateY(-0.25em);
+                            background-color: rgb(216, 112, 0);
+                            border: 2px solid rgb(216, 112, 0);
+                            color: white;
+                        }
+                    }
+                }
             }
-            form{
-                color: white;
-                border-radius: 10px;
-                padding: 30px;
-                background-color: rgba(51, 51, 51, 0.534);
-                // display: flex;
-                // flex-direction: column;
-            }
-         }
+        }
     }
 
     .brands{
         margin-top: 30px;
         margin-bottom: 30px;
-        height: 30vh;
         border-top: 1px solid;
         border-bottom: 1px solid;
+        .logos{
+            padding: 10px;
+            margin: 20px;
+            display: flex;
+            .image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                img{
+                    width: 100%;
+                }
+            }
+
+        }
     }
 }
 

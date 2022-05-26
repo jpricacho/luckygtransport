@@ -1,119 +1,102 @@
-import React, { useState } from 'react';
-import { Row, Container, Col, Form, Button } from 'react-bootstrap';
-import { Carousel } from 'react-bootstrap';
+import { Row, Container, Col, Form, Carousel } from 'react-bootstrap';
 import Promos from './Promos';
 import Reviews from './Reviews';
 import Pricing from './Pricing';
-import '../styles/FrontPage.scss'
+import ford from '../media/ford.png';
+import honda from '../media/honda.png';
+import hyundai from '../media/hyundai.png';
+import isuzu from '../media/isuzu.png';
+import kia from '../media/kia.png';
+import mitsubishi from '../media/mitsubishi.png';
+import nissan from '../media/nissan.png';
+import toyota from '../media/toyota.png';
+import '../styles/FrontPage.scss';
+import Booking from './Booking';
 
 
 const FrontPage = () => {
 
-    const [index, setIndex] = useState(0);
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    }
-
     return (
         <div className='section'>
-            <Carousel  activeIndex={index} onSelect={handleSelect} controls={false} interval={null}>
-                <Carousel.Item className='intro'>
-                    <Container fluid className='introbg'>
-                        <Row className='row'>
-                            <Col sm={6} className='title'>
-                                <div className='description'>
-                                    <div className='text'>
-                                        <h1 className='display-3'>Lucky G <br />transport</h1>
-                                        <p>description goes here</p>
+            <div className='banner'>
+
+                <div className='bannerbg'>
+                    <Container fluid='sm'>
+                        <Row className='m-3'>
+                            <Col>
+                                <h1>RENT A CAR</h1>
+                            </Col>
+                        </Row>
+                        <Booking/>
+                    </Container>
+                </div>
+
+            </div>
+
+            <Carousel variant='dark' className='brands' controls={false}>
+                <Carousel.Item>
+                    <Container fluid='sm'>
+                        <Row>
+                            <div className='logos'>
+                                <Col sm>
+                                    <div className='image'>
+                                        <img src={ford} />
                                     </div>
-                                </div>
-                            </Col>
+                                </Col>
+                                <Col sm>
+                                    <div className='image'>
+                                        <img src={honda} />
+                                    </div>
+                                </Col>
+                                <Col sm>
+                                    <div className='image'>
+                                        <img src={hyundai} />
+                                    </div>
+                                </Col>
+                                <Col sm>
+                                    <div className='image'>
+                                        <img src={isuzu} />
+                                    </div>
+                                </Col>
+                            </div>
                         </Row>
                     </Container>
                 </Carousel.Item>
 
-                <Carousel.Item className='formbg'>
-                    <Container fluid='sm' className='form1'>
-                        <Row className='row'>
-                           
-                            <Col sm>
-                            <h1>Pick up Details</h1>
-                                <Form>
+                <Carousel.Item>
+                    <Container fluid='sm'>
+                        <Row>
+                            <div className='logos'>
+                                <Col sm>
+                                    <div className='image'>
+                                        <img src={kia} />
+                                    </div>
+                                </Col>
 
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label>Pick-up Date and Time</Form.Label>
-                                        <Form.Control type='datetime-local' />
-                                    </Form.Group>
-
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label>Pick-up Location</Form.Label>
-                                        <Form.Select>
-                                            <option>Select</option>
-                                            <option value='QC'>Quezon City Branch</option>
-                                            <option value='Manila'>Manila Branch</option>
-                                            <option value='Makati'>Makati Branch</option>
-                                        </Form.Select>
-                                    </Form.Group>
-                                    <Form.Group >
-                                        <Form.Select>
-                                            <option>Car Type:</option>
-                                            <option value='standard'>Standard Car</option>
-                                            <option value='convertible'>Convertible</option>
-                                            <option value='luxury'>Luxury Car</option>
-                                            <option value='van'>Van</option>
-                                            <option value='suv'>SUVs</option>
-                                        </Form.Select>
-                                    </Form.Group>
-                                </Form>
-
-                            </Col>
-
-                            <Col sm>
-                            <h1>Return Details</h1>
-                                <Form>
-
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label>Return Date and Time</Form.Label>
-                                        <Form.Control type='datetime-local' />
-                                    </Form.Group>
-
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label>Drop-off Location</Form.Label>
-                                        <Form.Select>
-                                            <option>Select</option>
-                                            <option value='QC'>Quezon City Branch</option>
-                                            <option value='Manila'>Manila Branch</option>
-                                            <option value='Makati'>Makati Branch</option>
-                                        </Form.Select>
-                                    </Form.Group>
-                                    <Form.Group >
-                                        <Form.Control type='button' value='Check Price and Availability' className='button'/>
-                                    </Form.Group>
-
-                                </Form>
-
-                            </Col>
+                                <Col sm>
+                                    <div className='image'>
+                                        <img src={mitsubishi} />
+                                    </div>
+                                </Col>
+                                <Col sm>
+                                    <div className='image'>
+                                        <img src={nissan} />
+                                    </div>
+                                </Col>
+                                <Col sm>
+                                    <div className='image'>
+                                        <img src={toyota} />
+                                    </div>
+                                </Col>
+                            </div>
                         </Row>
-
                     </Container>
                 </Carousel.Item>
-
             </Carousel>
 
-            <Container fluid='sm'>
-                <Row className='brands'>
-                    <Col></Col>
-                    <Col></Col>
-                    <Col></Col>
-                    <Col></Col>
-                    <Col></Col>
-                    <Col></Col>
-                </Row>
-            </Container>
-
             <Promos />
-            <Reviews/>
-            <Pricing/>
+            <Reviews />
+            <Pricing />
         </div>
 
     )

@@ -18,14 +18,26 @@
         justify-content: center;
         .card{
             padding: 10px;
-            color: white;
-            background-color: rgba(68, 67, 67, 0.377);
-            .button{
+            color: rgb(61, 61, 61);
+            background-color: white;
+            .title{
+                font-family: 'Krona One', sans-serif;
                 color: rgb(255, 102, 0);
-                background-color: rgba(255, 255, 255, 0.822);
-                border: none;
-                &:hover{
-                    background-color: rgba(255, 102, 0, 0.842);
+            }
+
+            .button{
+                background: none;
+                border: 2px solid rgb(255, 102, 0);
+                color: rgb(255, 102, 0);
+                font: inherit;
+                line-height: 1;
+                margin: 0.5em;
+                padding: 1em 2em;
+                
+                &:hover,
+                :focus {
+                    transform: translateY(-0.25em);
+                    background-color: rgb(255, 102, 0);
                     color: white;
                 }
             }
