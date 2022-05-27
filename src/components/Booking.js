@@ -26,7 +26,7 @@ class Booking extends React.Component {
         event.preventDefault();
         axios({
             method: 'post',
-            url: '/booking.php',
+            url: '/test.php',
             headers: { 'content-type': 'application/json' },
             data: this.state
         })
