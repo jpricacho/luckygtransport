@@ -6,8 +6,36 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { Row, Container, Col, Form,  } from 'react-bootstrap';
+import { useState } from 'react';
+import { send } from 'emailjs-com';
+import Alert from 'react-bootstrap/Alert'
 
-const ContactUs = () => {
+function ContactUs() {
+    const [toSend, setToSend] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+    })
+    const onSubmit = (e) => {
+        e.preventDefault();
+        send(
+            'service_er31r8c',
+            'template_sjjbl6d',
+            toSend,
+            'P3xxVXzGNU-4KqMT4'
+        )
+        .then((response) => {
+            // console.log('SUCCESS!', response.status, response.text);
+            <Alert variant='primary'>Thank You!</Alert>
+        })
+        .catch((err) => {
+            console.log('FAILED...', err);
+        });
+    };
+    const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
+    };
     return (
         <div className='contact'>
             <Header />
@@ -49,24 +77,24 @@ const ContactUs = () => {
                                 <Form>
                                     <Form.Group className='mb-3'>
                                         <Form.Label>Email</Form.Label>
-                                        <Form.Control type='email' />
+                                        <Form.Control type='text' name='email' id='email' value={toSend.email} onChange={handleChange} required/>
                                     </Form.Group>
 
                                     <Form.Group className='mb-3'>
                                         <Form.Label>Name</Form.Label>
-                                        <Form.Control type='text' />
+                                        <Form.Control type='text' name='name' id='name' value={toSend.name} onChange={handleChange} required/>
                                     </Form.Group>
 
                                     <Form.Group className='mb-3'>
                                         <Form.Label>Phone</Form.Label>
-                                        <Form.Control type='text' />
+                                        <Form.Control type='text' name='phone' id='phone' value={toSend.phone} onChange={handleChange} required/>
                                     </Form.Group>
 
                                     <Form.Group className='mb-3'>
                                         <Form.Label>Message</Form.Label>
-                                        <Form.Control as='textarea' rows='3' />
+                                        <Form.Control as='textarea' rows='3' name='message' id='message' value={toSend.message} onChange={handleChange} required/>
                                     </Form.Group>
-                                    <input type='submit' value='Send' className='submit' />
+                                    <input type='submit' value='Send' className='submit' onClick={onSubmit}/>
                                 </Form>
                             </div>
 
