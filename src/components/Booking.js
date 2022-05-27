@@ -1,8 +1,10 @@
 import { Row, Col, Form, } from 'react-bootstrap';
 import React from 'react';
 import axios from 'axios';
+// import booking from '../components/booking.php';
 
-const API_PATH = 'https://luckyg.netlify.app/booking.php'
+
+// const API_PATH = 'http://localhost:3000/booking.php'
 
 
 class Booking extends React.Component {
@@ -24,7 +26,7 @@ class Booking extends React.Component {
         event.preventDefault();
         axios({
             method: 'post',
-            url: `${API_PATH}`,
+            url: '/booking.php',
             headers: { 'content-type': 'application/json' },
             data: this.state
         })
@@ -116,7 +118,8 @@ class Booking extends React.Component {
 
                 <Row>
                     <Col className='button'>
-                        <input type='submit' value='GET A QUOTE NOW' className='btn' onClick={e => this.handleFormSubmit(e)}/>
+                        {/* <input type='submit' value='GET A QUOTE NOW' className='btn' onClick={e => this.handleFormSubmit(e)}/> */}
+                        <input type='submit' value='GET A QUOTE NOW' className='btn'/>
                     </Col>
                 </Row>
             </Form>
